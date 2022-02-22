@@ -1,9 +1,9 @@
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	
 	private AutenticacaoUtil autenticador;
 	
-	public Gerente() {
+	public Administrador() {
 		this.autenticador = new AutenticacaoUtil();
 	}
 
@@ -20,8 +20,7 @@ public class Gerente extends Funcionario implements Autenticavel {
 	
 	@Override
 	public double getBonificacao() {
-		return super.getSalario();
+		return 50;
 	}
-	
 
 }

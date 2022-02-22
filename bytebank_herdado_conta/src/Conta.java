@@ -6,6 +6,10 @@ public abstract class Conta{
 	
 	public static int total;
 	
+	public Conta() {
+		
+	}
+	
 	public Conta(int agencia, int numero) {
 		Conta.total++;
 		//System.out.println("O total de contas é: " + Conta.total);
