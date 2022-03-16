@@ -2,6 +2,7 @@ package br.com.bytebank.banco.teste;
 
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
+import br.com.bytebank.banco.modelo.SaldoInsuficienteException;
 
 public class TesteContas {
 
@@ -13,7 +14,11 @@ public class TesteContas {
             ContaPoupanca cp = new ContaPoupanca(222, 222);
             cp.deposita(200.0);
 
-            cc.transfere(10.0, cp);
+            try {
+				cc.transfere(10.0, cp);
+			} catch (SaldoInsuficienteException e) {
+				e.printStackTrace();
+			}
 
             System.out.println("CC: " + cc.getSaldo());
             System.out.println("CP: " + cp.getSaldo());

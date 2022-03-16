@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.modelo;
 
 public abstract class Conta{
+	
 	private double saldo;
 	private int agencia;
 	private int numero;
@@ -12,6 +13,12 @@ public abstract class Conta{
 		
 	}
 	
+	/**
+	 * Construtor para inicializar o objeto Conta a partir da agência e número
+	 * @param agencia
+	 * @param numero
+	 */
+	
 	public Conta(int agencia, int numero) {
 		Conta.total++;
 		//System.out.println("O total de contas é: " + Conta.total);
@@ -19,24 +26,24 @@ public abstract class Conta{
 		this.numero = numero;
 	}
 	
-	public void deposita(double valor) {
-		this.saldo += valor;
+	public abstract void deposita(double valor);
+	
+	/**
+	 * Valor precisa ser maior do que o saldo
+	 * @param valor
+	 * @throws SaldoInsuficienteException
+	 */
+	
+	public void saca(double valor) throws SaldoInsuficienteException {
+		if(valor > this.saldo) {
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor:" + valor);
+		}
+		this.saldo -= valor;
 	}
 	
-	public boolean saca(double valor) {
-		if(valor < this.saldo) {
-			this.saldo -= valor;
-			return true;
-		}
-		return false;
-	}
-	
-	public boolean transfere(double valor, Conta contaDestino) {
-		if(this.saca(valor)) {
-			contaDestino.deposita(valor);
-			return true;
-		}
-		return false;
+	public void transfere(double valor, Conta contaDestino) throws SaldoInsuficienteException {
+		this.saca(valor);
+		contaDestino.deposita(valor);
 	}
 	
 	public double getSaldo() {
