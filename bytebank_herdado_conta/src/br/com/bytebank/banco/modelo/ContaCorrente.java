@@ -26,4 +26,9 @@ public class ContaCorrente extends Conta implements Tributavel {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "ContaCorrente, " + super.toString();
+	}
 }
