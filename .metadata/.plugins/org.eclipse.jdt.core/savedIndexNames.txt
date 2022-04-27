@@ -1,4 +1,2 @@
 INDEX VERSION 1.131+C:\workspace\curso_Java_Alura\.metadata\.plugins\org.eclipse.jdt.core
-1602128660.index
 1865797976.index
-903786306.index
