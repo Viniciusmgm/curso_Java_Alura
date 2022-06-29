@@ -11,7 +11,18 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java8.ComparadorPorTamanho"/>
     <fullyQualifiedTypeName name="java8.ImprimeNaLinha"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.time.Month"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="junit.framework.Assert"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="br.com.alura.tdd.modelo.Funcionario"/>
+    <fullyQualifiedTypeName name="java.math.RoundingMode"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 </qualifiedTypeNameHistroy>
